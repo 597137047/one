@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user-probider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_boot_01?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8880
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+mybatis:
+  type-aliases-package: com.usian.entity
+#通用mapper配置
+mapper:
+  #公用接口类路径
+  mappers: com.usian.basemapper.BaseMapper
+  identity: MYSQL
